@@ -1,0 +1,27 @@
+// The main navigation of the webpage, top nav
+
+.main-nav {
+  background-color: $themeColor-Main;
+  color: $white;
+  height: 5rem;
+  font-size: 2.5rem;
+  padding: 0 $main-space;
+  ul {
+    list-style: none;
+    display: flex;
+    height: inherit;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 0;
+    padding: 0;
+    li {
+      margin: 0 2rem;
+    }
+    li:first-child {
+      margin-left: 0;
+    }
+    li:last-child {
+      margin-right: 0;
+    }
+  }
+}

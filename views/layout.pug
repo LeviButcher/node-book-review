@@ -2,10 +2,30 @@ html
   head
     title #{ title } - Bookie
     link(rel="stylesheet", href="/public/dist/App.bundle.css")
-    
+    meta(name="viewport" content="width=device-width, initial-scale=1")
     
   body
-    block content
+    block nav
+      header
+        nav.main-nav
+          ul
+            li
+              a(href="/") Bookie
+            li
+              a(href="#") Top
+            li
+              a(href="#") Add Review
+            li
+              a(href="#") Search
+            li
+              a(href="#") Register
+            li
+              a(href="#") Sign In
+            
+    
+    main
+      block content
+      
     
     block scripts
       script(src="/public/dist/App.bundle.js", charset="utf-8")
