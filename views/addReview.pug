@@ -1,0 +1,13 @@
+extends layout
+
+block content 
+  article
+    header
+      h1 Add Review
+    form(action='/Review/Add' method="POST")
+      label(for="bookName") Book Name
+      input(type="text", name="bookName", value="") 
+      label(for="content") The Review Content
+      textarea(name="content", rows="8", cols="80")
+      input(type="submit", value="Submit")
+    

@@ -1,8 +1,17 @@
 extends layout
 
+include mixins/reviewCard
+
 block content
   header
     h1 Welcome to Bookie!
   div
     p Your source of book reviews
     
+  section
+    header
+      h3 Most Recently Added Reviews
+    .review-container
+      if reviews
+        each review in reviews
+          +reviewCard(review) 

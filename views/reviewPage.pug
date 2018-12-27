@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  article
+    header
+      h1= review.bookName
+      time= review.created
+      h5 By Some Person
+    p= review.content
+    

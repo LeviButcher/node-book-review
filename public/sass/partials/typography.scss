@@ -33,3 +33,7 @@ p {
   line-height: 2;
   font-size: 1.6rem;
 }
+
+header h1,h2,h3,h4,h5,h6 {
+  border-bottom: 5px solid $themeColor-Main-Dark;
+}
