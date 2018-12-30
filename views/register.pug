@@ -1,0 +1,16 @@
+extends layout
+
+block content
+  section
+    form(action="register", method="post")
+      header
+        h2 Registration
+      label(for="email") Email
+      input(type="email", name="email" id="email")
+      label(for="name") UserName
+      input(type="text", name="name" id="name")
+      label(for="password") Password
+      input(type="password", name="password" id="password")
+      label(for="password-confirm") Confirm Password
+      input(type="password", name="password-confirm" id="password-confirm")
+      input(type="submit", name="submit", value="Submit")

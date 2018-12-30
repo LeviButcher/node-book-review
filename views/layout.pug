@@ -18,11 +18,25 @@ html
               a(href="/Review/Add") Add Review
             li
               a(href="#") Search
-            li
-              a(href="#") Register
-            li
-              a(href="#") Sign In
+            if user
+              li 
+                a(href='#')= user.name
+              li
+                a(href='/Logout') Logout
+            else 
+              li
+                a(href="/Register") Register
+              li
+                a(href="/Login") LogIn
             
+    block messages
+      if locals.flashes
+        - const categories = Object.keys(locals.flashes)
+        each category in categories
+          each message in flashes[category]
+            .flash(class=`flash--${category}`)
+              p.flash__text!= message
+              button.flash__remove(onClick="this.parentElement.remove()") &times;
     
     main
       block content
