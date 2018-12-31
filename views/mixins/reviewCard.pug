@@ -1,7 +1,8 @@
 mixin reviewCard(review = {})
   article.review-card
     header
-      a(href=`/review/${review._id}`)
+      a(href=`/review/${review.slug}`)
         h5= review.bookName
+        h6= review.author.name
       time= review.created
     p= review.content.split(' ').slice(0 , 25).join(' ')

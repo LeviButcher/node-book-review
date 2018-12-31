@@ -7,14 +7,14 @@ exports.addReviewPage = (req, res) => {
 
 // This should direct you to the review page
 exports.addReview = async (req, res) => {
+  req.body.author = req.user._id
   const newReview = new Review(req.body)
-  console.log(req.body)
   await newReview.save()
-  res.redirect(`/Review/${newReview._id}`)
+  res.redirect(`/Review/${newReview.slug}`)
 }
 
 exports.getReview = async (req, res) => {
-  const review = await Review.findOne({ _id: req.params.id })
+  const review = await Review.findOne({ slug: req.params.slug })
   console.log(review)
   res.render('reviewPage', { title: 'Review', review })
 }

@@ -11,9 +11,9 @@ router.get('/', catchErrors(homeController.homePage))
 router.get('/home', catchErrors(homeController.homePage))
 
 // Review
-router.get('/review/add', reviewController.addReviewPage)
-router.post('/review/add', catchErrors(reviewController.addReview))
-router.get('/review/:id', catchErrors(reviewController.getReview))
+router.get('/review/add', authController.isLoggedIn, reviewController.addReviewPage)
+router.post('/review/add', authController.isLoggedIn, catchErrors(reviewController.addReview))
+router.get('/review/:slug', catchErrors(reviewController.getReview))
 
 // Login and Registration
 router.get('/register', userController.registerPage)
