@@ -5,4 +5,7 @@ mixin reviewCard(review = {})
         h5= review.bookName
         h6 By: #{review.author.name}
       time #{h.moment(review.created).fromNow()}
+      div
+        each star in Array(review.rating)
+          = `★`
     p= review.content.split(' ').slice(0 , 25).join(' ')

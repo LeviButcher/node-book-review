@@ -22,6 +22,11 @@ const reviewSchema = new Schema({
   },
   slug: {
     type: String
+  },
+  rating: {
+    type: Number,
+    min: 1,
+    max: 5
   }
 })
 
