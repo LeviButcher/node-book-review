@@ -3,9 +3,11 @@ mixin reviewCard(review = {})
     header
       a(href=`/review/${review.slug}`)
         h5= review.bookName
+      .review-meta
         h6 By: #{review.author.name}
-      time #{h.moment(review.created).fromNow()}
-      div
-        each star in Array(review.rating)
-          = `★`
+        .review-meta-group
+          time #{h.moment(review.created).fromNow()}
+          .review-stars
+            each star in Array(review.rating)
+              = `★`
     p= review.content.split(' ').slice(0 , 25).join(' ')

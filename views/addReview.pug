@@ -9,7 +9,7 @@ block content
       input(type="text", name="bookName", value="") 
       label(for="content") The Review Content
       textarea(name="content", rows="8", cols="80")
-      .review_stars
+      .review-stars
         each num in [5,4,3,2,1]
           input(type='radio' required id=`star${num}` name='rating' value=num)
           label(for=`star${num}`) #{num} Stars
