@@ -5,6 +5,6 @@ block content
     header
       h1= review.bookName
       h5= review.author.name
-      time= review.created
+      time  #{h.moment(review.created).fromNow()}
     p= review.content
     
