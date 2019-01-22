@@ -1,0 +1,11 @@
+.bookTitleList {
+  background-color: #fff;
+  p {
+    padding: 1rem;
+    margin: 0;
+
+    &.selectTitle {
+      background-color: $themeColor-Main;
+    }
+  }
+}

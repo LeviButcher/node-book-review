@@ -1,4 +1,5 @@
-import '../sass/start.scss'
-import test from './modules/test'
+import "../sass/start.scss";
+import { $, $$ } from "./modules/bling";
+import { titleSelect } from "./modules/titleSelect";
 
-test()
+titleSelect($("#bookName"));
