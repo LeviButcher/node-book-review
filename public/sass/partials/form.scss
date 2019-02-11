@@ -1,5 +1,30 @@
-input, label {
+form {
+  background-color: #fff;
+  padding: $main-space;
+  box-shadow: 3px 3px 10px 3px rgba(0, 0, 0, 0.2);
+  header {
+    border-bottom: 5px solid $themeColor-Main;
+  }
+}
+
+input,
+label {
   display: block;
   margin: 1rem 0;
   font-size: 2rem;
+}
+
+input {
+  border: none;
+  border-bottom: 3px solid $gray;
+}
+
+input[type="text"]:focus {
+  outline: none;
+  border-bottom: 3px solid $themeColor-Main-Light;
+}
+
+.end-form {
+  padding: 2rem 0;
+  border-bottom: 5px solid $themeColor-Main;
 }

@@ -35,7 +35,7 @@ exports.titleSelect = element => {
 function textChangeListener(element) {
   element.addEventListener("input", e => {
     const { value } = e.target;
-    const bookList = document.querySelector(".bookTitleList");
+    const bookList = document.querySelector(".book-title-list");
     if (value.length < 4) {
       bookList.innerHTML = "";
       return;
@@ -62,25 +62,25 @@ function selectTitleListener(element) {
   // -1 to make the first time down is hit easier
   let index = -1;
   element.addEventListener("keydown", e => {
-    const bookTitles = document.querySelectorAll(".bookTitleList > p");
+    const bookTitles = document.querySelectorAll(".book-title-list > p");
     const length = bookTitles.length;
     if (!bookTitles) return;
     bookTitles.forEach(titleEle => {
-      titleEle.classList.remove("selectTitle");
+      titleEle.classList.remove("selected-title");
     });
     if (e.keyCode === enter) {
       console.dir(element);
       element.value = bookTitles[index].innerText;
-      const bookList = document.querySelector(".bookTitleList");
+      const bookList = document.querySelector(".book-title-list");
       bookList.innerHTML = "";
     } else if (e.keyCode === down) {
       console.log(index);
       index = (index + 1) % length;
-      bookTitles[index].classList.add("selectTitle");
+      bookTitles[index].classList.add("selected-title");
     } else if (e.keyCode === up) {
       index--;
       if (index < 0) index = length - 1;
-      bookTitles[index].classList.add("selectTitle");
+      bookTitles[index].classList.add("selected-title");
     }
   });
 }

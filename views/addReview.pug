@@ -1,19 +1,20 @@
 extends layout
 
 block content 
-  article
-    header
-      h1 Add Review
-    form(action='/Review/Add' method="POST")
-      .bookName
-        label(for="bookName") Book Name
-        input(type="text", name="bookName", value="", id="bookName") 
-        .bookTitleList
-      label(for="content") The Review Content
-      textarea(name="content", rows="8", cols="80")
-      .review-stars
-        each num in [5,4,3,2,1]
-          input(type='radio' required id=`star${num}` name='rating' value=num)
-          label(for=`star${num}`) #{num} Stars
-      input(type="submit", value="Submit")
+  section.container
+      form(action='/Review/Add' method="POST").review-form
+        header
+          h1 Add Review
+        .review-info
+          label(for="bookName") Book Name
+            input(type="text", name="bookName", value="", id="bookName" focused) 
+            .book-title-list
+          .review-stars
+            each num in [5,4,3,2,1]
+              input(type='radio' required id=`star${num}` name='rating' value=num)
+              label(for=`star${num}`)
+        label(for="content") Review Content
+        textarea(id="content" name="content", rows="8", cols="80")
+        .end-form
+        input(type="submit", value="Submit").btn.btn-acc.go-right
     
