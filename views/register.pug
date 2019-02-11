@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  section
+  section.container
     form(action="register", method="post")
       header
         h2 Registration
@@ -13,4 +13,5 @@ block content
       input(type="password", name="password" id="password")
       label(for="password-confirm") Confirm Password
       input(type="password", name="password-confirm" id="password-confirm")
-      input(type="submit", name="submit", value="Submit")
+      .end-form
+      input(type="submit", name="submit", value="Submit").btn.btn-acc.go-right

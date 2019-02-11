@@ -1,7 +1,7 @@
 extends layout
 
 block content
-  section
+  section.container
     form(action="login", method="post")
       header
         h2 Login
@@ -9,4 +9,5 @@ block content
       input(type="email", name="email" id="email")
       label(for="password") Password
       input(type="password", name="password" id="password")
-      input(type="submit", name="submit", value="Submit")
+      .end-form
+      input(type="submit", name="submit", value="Submit").btn.btn-acc.go-right

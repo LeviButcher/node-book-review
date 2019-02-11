@@ -1,0 +1,13 @@
+.main-hero {
+  background-image: url("/public/dist/images/hero-books.jpeg");
+  text-align: center;
+  color: white;
+  height: calc(100vh - 5rem);
+  display: grid;
+  grid-template-columns: auto;
+
+  align-items: center;
+  * {
+    flex: 100%;
+  }
+}
