@@ -1,0 +1,8 @@
+.section {
+  padding-top: 5rem;
+
+  & > header {
+    border-bottom: 5px solid $themeColor-Main;
+    margin-bottom: 2rem;
+  }
+}

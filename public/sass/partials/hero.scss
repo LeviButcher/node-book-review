@@ -5,9 +5,19 @@
   height: calc(100vh - 5rem);
   display: grid;
   grid-template-columns: auto;
-
-  align-items: center;
+  grid-gap: 1rem;
+  padding: 2rem;
+  margin-left: -4rem;
+  margin-right: -4rem;
+  margin-top: -4rem;
+  text-shadow: 2px 2px black;
   * {
     flex: 100%;
+  }
+  *:first-child {
+    align-self: flex-end;
+  }
+  *:last-child {
+    align-self: flex-start;
   }
 }

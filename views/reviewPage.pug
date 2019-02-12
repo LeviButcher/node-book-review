@@ -1,10 +1,15 @@
 extends layout
 
 block content
-  article.review-card
-    header
-      h1= review.bookName
-      h5= review.author.name
-      time  #{h.moment(review.created).fromNow()}
-    p= review.content
+  section.container
+    article.review
+      header
+        h1= review.bookName
+      .review-info  
+        h5 By: #{review.author.name}
+        time  #{h.moment(review.created).fromNow()}
+        .stars
+          each star in Array(review.rating)
+            = `★`
+      p= review.content
     

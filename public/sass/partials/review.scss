@@ -1,9 +1,20 @@
 .review-container {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  grid-gap: 5rem;
   flex-flow: wrap row;
   padding: 1rem 0;
   align-items: flex-start;
+  justify-content: space-between;
+
+  *:nth-child(odd) {
+    justify-self: start;
+  }
+
+  *:nth-child(even) {
+    justify-self: end;
+  }
 }
 
 .review-card {
@@ -25,6 +36,12 @@
     flex-flow: row wrap;
     justify-content: space-between;
   }
+}
+
+.stars {
+  color: $yellow;
+  text-shadow: 1px 1px $black;
+  display: flex;
 }
 
 .review-stars {
@@ -74,4 +91,22 @@
   flex-flow: wrap;
   justify-content: space-between;
   padding: 1rem 0;
+}
+
+.review {
+  background-color: #fff;
+  padding: 5rem;
+  box-shadow: 0 3px 10px 3px rgba(0, 0, 0, 0.3);
+  header {
+    border-bottom: 5px solid $themeColor-Main;
+  }
+}
+
+.review-info {
+  display: flex;
+  justify-content: flex-start;
+
+  * {
+    margin-right: 20px;
+  }
 }
