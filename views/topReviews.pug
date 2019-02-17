@@ -1,0 +1,15 @@
+extends layout
+
+include mixins/reviewCard
+
+block content
+  section.section
+    header
+      h1 Hello Tops
+    .review-container
+      if reviews
+        for review in reviews
+          +reviewCard(review)
+    section.section.center
+      a(href=`?page=${Number(page) - 1}` class="btn btn-main" ) Prev
+      a(href=`?page=${Number(page) + 1}` class="btn btn-acc") Next

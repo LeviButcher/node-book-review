@@ -23,6 +23,8 @@ router.post(
 );
 router.get("/review/:slug", catchErrors(reviewController.getReview));
 
+router.get("/top", catchErrors(reviewController.getTopReviews));
+
 // Login and Registration
 router.get("/register", userController.registerPage);
 router.get("/login", userController.loginPage);

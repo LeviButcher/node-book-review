@@ -56,5 +56,18 @@
   "bugs": {
     "url": "https://github.com/LeviButcher/node-book-review/issues"
   },
-  "homepage": "https://github.com/LeviButcher/node-book-review#readme"
+  "homepage": "https://github.com/LeviButcher/node-book-review#readme",
+  "prettier": {
+    "trailingComma": "es5",
+    "arrowParens": "always",
+    "bracketSpacing": true,
+    "singleQuote": true
+  },
+  "nodemonConfig": {
+    "events": {
+      "restart": "kill-port 7000",
+      "crash": "kill-port 7000"
+    },
+    "delay": "1500"
+  }
 }
