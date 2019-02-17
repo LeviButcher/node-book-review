@@ -1,0 +1,7 @@
+mixin pagingButtons(page = 1, totalPages)
+  section.section.center 
+    - isPrev = page > 1
+    - isNext = page < total
+    a(href=`?page=${Number(page) - 1}` class=`btn btn-main ${!isPrev ? "disabled" : ""}` aria-disabled=!isPrev) Prev
+    |
+    a(href=`?page=${Number(page) + 1}` class=`btn btn-acc ${!isNext ? "disabled" : ""}` aria-disabled=!isNext) Next
