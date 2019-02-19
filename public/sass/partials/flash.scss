@@ -1,0 +1,37 @@
+.flash {
+  display: flex;
+  justify-content: space-between;
+  margin: 2rem 4rem;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  right: 0;
+  box-shadow: 0px 0px 8px 3px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  padding: 1rem;
+
+  &--success {
+    background-color: $themeColor-Accent-Light;
+  }
+
+  &--error {
+    background-color: $themeColor-Main;
+  }
+
+  &--caution {
+    background-color: $yellow;
+  }
+}
+
+.flash__remove {
+  background-color: $gray;
+  font-size: 25px;
+  border: none;
+  border-radius: 10px;
+  &:hover {
+    transform: scale(1.1);
+    color: $themeColor-Accent-Light;
+    background-color: white;
+    cursor: pointer;
+  }
+}
