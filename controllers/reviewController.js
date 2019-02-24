@@ -43,3 +43,27 @@ exports.getTopReviews = async (req, res) => {
     totalPages,
   });
 };
+
+exports.searchReviews = async (req, res) => {
+  const search = req.query.search;
+  const count = 1;
+  const page = req.query.page || 1;
+  const skip = page > 1 ? page * count - count : 0;
+
+  const totalPromise = Review.find({ $text: { $search: search } }).count();
+  const reviewPromise = Review.find({ $text: { $search: search } })
+    .skip(skip)
+    .limit(count);
+
+  const [total, reviews] = await Promise.all([totalPromise, reviewPromise]);
+
+  const totalPages = total / count;
+  res.render('searchPage', {
+    title: 'Search',
+    reviews,
+    search,
+    page,
+    count,
+    totalPages,
+  });
+};

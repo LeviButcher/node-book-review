@@ -27,5 +27,31 @@
     li:nth-last-child(2) {
       margin-left: auto;
     }
+    form {
+      background-color: transparent;
+      position: relative;
+      height: 100%;
+      padding: 0;
+      input {
+        background-color: $themeColor-Main-Light;
+        color: $white;
+        padding: 0.5rem;
+        border: none;
+        margin: 0;
+        border-radius: 5px;
+        padding-left: 2rem;
+      }
+      &:before {
+        content: '🔍';
+        top: 0;
+        bottom: 0;
+        text-align: center;
+        line-height: 2;
+        position: absolute;
+        left: 0;
+        font-size: 1.5rem;
+        z-index: 1;
+      }
+    }
   }
 }

@@ -1,0 +1,16 @@
+extends layout
+
+include mixins/reviewCard
+include mixins/pagingButtons
+
+block content
+  section.section
+    header
+      h1 Searching for <span class="highlight">"#{search}"</span> in Reviews
+    .review-container
+      if reviews
+        for review in reviews
+          +reviewCard(review)
+      else
+        p No Reviews found
+    +pagingButtons(page, totalPages, `search=${search}`)
