@@ -21,7 +21,7 @@ Take what I have learned from Wes Bos's Node JS course and created my own node j
 MongoDB querying is weird and I forsee that being the biggest challange ahead.
 
 ## Result
-I understand express, mongoose, mongodb, and promises much better. However, I didn't complete all the feature I wanted to make. Such as: 
+I understand express, mongoose, mongodb, and promises much better. However, I didn't complete all the features I wanted to make. Such as: 
 * book querys- "this months hot reviews"
 * comments
 
